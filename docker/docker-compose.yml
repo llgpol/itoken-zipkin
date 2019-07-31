@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+        itoken-zipkin:
+                image: 192.168.242.131:5000/itoken-zipkin
+                restart: always
+                container_name: itoken-zipkin
+                ports:
+                        - 9411:9411
+                networks:
+                        - my-network-name
+networks:
+        my-network-name:
+                name: zipkin        
+
